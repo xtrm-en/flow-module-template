@@ -1,13 +1,13 @@
-# module-template
+# flow-module-template
 
-A modular approach to extending fart-cli.
+A modular approach to extending flow-cli.
 
 ## Test this repository
 
 You can add this module by running the following command:
 
 ```bash
-fart add-module xtrm-en/fart-module-template
+flow module add xtrm-en/flow-module-template
 ```
 
 It will be automatically cloned and registered.

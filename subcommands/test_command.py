@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from argparse import ArgumentParser, Namespace
-from fart.commands import create
-from fart.utils import success
+from flow.commands import create
+from flow.utils import success
 
 
-def __exec(_: ArgumentParser, __: Namespace) -> None:
-    success("Created your first subcommand!")
+def __parser(parser: ArgumentParser) -> None:
+    parser.add_argument("name", help="your name")
 
 
-create("hello", "your first subcommand", lambda _: None, __exec)
+def __exec(_: ArgumentParser, args: Namespace) -> int:
+    success(f"Hello, {args.name}!")
+    return 0
+
+
+create("hello", "your first subcommand", __parser, __exec)
