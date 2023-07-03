@@ -1,3 +1,3 @@
 from flow.utils import log
 
-log("Imported")
+print("Imported flow-module-template")
